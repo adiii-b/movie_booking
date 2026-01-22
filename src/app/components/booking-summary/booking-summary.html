@@ -1,0 +1,9 @@
+<h2>Booking Summary</h2>
+
+<div *ngIf="booking">
+  <p><strong>Movie:</strong> {{ booking.movieTitle }}</p>
+  <p><strong>Theatre:</strong> {{ booking.theatreName }}</p>
+  <p><strong>Show Time:</strong> {{ booking.showTime }}</p>
+  <p><strong>Seats:</strong> {{ booking.seats.join(', ') }}</p>
+  <p><strong>Total Amount:</strong> ₹{{ booking.totalAmount }}</p>
+</div>

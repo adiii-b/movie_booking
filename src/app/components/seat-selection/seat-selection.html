@@ -1,0 +1,20 @@
+<h3>Select Seats</h3>
+
+<p *ngIf="seats.length === 0">No seats available</p>
+
+<div *ngFor="let seat of seats">
+  <button
+    (click)="selectSeat(seat)"
+    [ngClass]="{
+      'booked': seat.isBooked,
+      'selected': selectedSeats.includes(seat.seatNumber)
+    }"
+    [ngStyle]="{
+      'cursor': seat.isBooked ? 'not-allowed' : 'pointer'
+    }">
+    {{ seat.seatNumber }}
+  </button>
+</div>
+
+<p>Selected Seats: {{ selectedSeats.join(', ') }}</p>
+

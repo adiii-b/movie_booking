@@ -1,0 +1,8 @@
+<h2>Showtimes</h2>
+<div *ngFor="let showtime of showtimes">
+  <h3>{{ showtime.title }}</h3>
+  <p>Screen: {{ showtime.screen }}</p>
+  <p>Price: ${{ showtime.price }}</p>
+  <p>Time: {{ showtime.time }}</p>
+  <p>Language: {{ showtime.language }}</p>
+  <hr>

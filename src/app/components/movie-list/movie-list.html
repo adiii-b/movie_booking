@@ -1,0 +1,14 @@
+<h2>Now Showing</h2>
+
+<div *ngFor="let movie of movies">
+  <h3>{{ movie.title }}</h3>
+  <p>Genre: {{ movie.genre }}</p>
+  <p>Duration: {{ movie.duration }} mins</p>
+  <p>Rating: {{ movie.rating }}</p>
+  <hr>
+</div>
+
+<p *ngIf="movies.length === 0">
+  No movies currently showing
+</p>
+
